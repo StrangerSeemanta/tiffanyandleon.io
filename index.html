@@ -5,75 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Tiffany &amp; Leon are getting married!</title>
 <link rel="stylesheet" type="text/css" media="all" href="style.css" />
-<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-        <script type="text/javascript">
-            $(function() {
-                $('div.nav a').bind('click',function(event){
-                    var $anchor = $(this);
-                    
-                    $('html, body').stop().animate({
-                        scrollTop: $($anchor.attr('href')).offset().top
-                    }, 3000,'easeInOutQuad');
-                    /*
-                    if you don't want to use the easing effects:
-                    $('html, body').stop().animate({
-                        scrollTop: $($anchor.attr('href')).offset().top
-                    }, 1000);
-                    */
-                    event.preventDefault();
-                });
-				
-				$('div#lunaplane a').bind('click',function(event){
-                    var $anchor = $(this);
-                    
-                    $('html, body').stop().animate({
-                        scrollTop: $($anchor.attr('href')).offset().top
-                    }, 3000,'easeInOutQuad');
-                    /*
-                    if you don't want to use the easing effects:
-                    $('html, body').stop().animate({
-                        scrollTop: $($anchor.attr('href')).offset().top
-                    }, 1000);
-                    */
-                    event.preventDefault();
-                });
-				
-            });
-        </script>
-        <script type="text/javascript" src="js/jquery.spritely-0.1.js"></script>
-        <script type="text/javascript">
-		(function($) {
-			$(document).ready(function() {
-			
-				
-				
-				$('#clouds').pan({fps: 30, speed: 0.5, dir: 'right'});
-				
-				$('#lunaplane').sprite({fps: 10, no_of_frames: 3})
-					/*.spRandom({
-						top: 443,
-						left: 538,
-						right: 588,
-						bottom: 480,
-						speed: 2000,
-						pause: 2000
-					});*/
-				
-				$('#kg').sprite({fps: 8, no_of_frames: 1})
-					.spRandom({
-						top: 20,
-						left: 50,
-						right: 90,
-						bottom: 80,
-						speed: 3500,
-						pause: 1000
-					});
-				
-			
-			});
-		})(jQuery);
-	</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link type='text/css' href='contact.css' rel='stylesheet' media='screen' />
     <script type="text/javascript" src="js/jquery.lightbox-0.5.pack.js"></script>
 <script type="text/javascript">
