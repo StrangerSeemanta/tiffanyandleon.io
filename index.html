@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Tiffany &amp; Leona are getting married!</title>
+<title>Tiffany &amp; Leon are getting married!</title>
 <link rel="stylesheet" type="text/css" media="all" href="style.css" />
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
@@ -84,6 +84,10 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <h1>Page is loading...keep your patience</h1>
+        <img src="new/heart.png" alt="loading" id="heart">
+    </div>
 <div id="container">
 	<div id="section1">
 		<div id="kg"></div>  
@@ -121,11 +125,12 @@
             <a class="down" id="down4" href="#section5"></a>
         </div><!--End nav-dl-->
     	<div id="hsresort">        
-        	<a id="btn-trails" href="images/hiking_map.jpg" title="Hiking Trails">View Hiking Trails</a>
+        	<div id="btn-trails">Things To DO</div>
             <a id="btn-property" href="images/1280px-Disneyworld_overview_map.png" title="Highland Springs Resort Property Map">View Property Map</a>
             </div>
             <img id="rocketpig" src="images/rocketpig.png" alt="Rocket Pig!" />
-    </div>
+            
+        </div>
     <div id="section5">
     	<div class="nav" id="nav5">
         	<a class="up" id="up5" href="#section4"></a>
@@ -140,5 +145,23 @@
 <div id="clouds"></div>
 <script type='text/javascript' src='js/jquery.simplemodal.js'></script>
 <script type='text/javascript' src='js/contact.js'></script>
+<script>
+    window.addEventListener('load',function(){
+        $('.preloader').hide()
+        $('#btn-trails').click(function(){
+            window.open('todo.html')
+        })
+    })
+    function loaderAnime(){
+    $('#heart').animate({
+      opacity:'0.5'
+    },1000,'swing',function(){
+      $('#heart').animate({
+        opacity:'1'
+      },200,'swing',loaderAnime)
+    })
+    }
+   loaderAnime()
+</script>
 </body>
 </html>

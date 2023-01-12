@@ -15,6 +15,31 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	padding: 0;
 	vertical-align: baseline;
 }
+.preloader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	pointer-events: none;
+	z-index: 111111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 40px;
+	color: white;
+	font-size: 30px;
+}
+
+#heart {
+display: block;
+margin: 0 auto;
+width: 100px;
+height: 100px;
+background: url('heart.png') no-repeat;
+}
 body {
 	line-height: 1;
 }
