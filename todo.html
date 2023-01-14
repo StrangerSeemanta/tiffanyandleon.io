@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Things to do in ORLANDO</title>
+</head>
+<style>
+    .preloader{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        pointer-events: none;
+        z-index: 111111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+        color: white;
+        font-size: 30px;
+    }
+    
+    #heart {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background: url('heart.png') no-repeat;
+  }
+    body {
+        outline: 0;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+        background: #9fddea;
+
+    }
+
+    #clouds {
+        height: 300vh;
+    }
+
+    .container {
+        padding: 20px;
+        text-align: center;
+        font-weight: 900;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: x-large;
+        color: Navy;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .gallery-holder {
+        width: 90%;
+        height: 140vh;
+        background: transparent;
+        z-index: 1000;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 22px 42px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .gallery-holder div.img-holder {
+        width: 250px;
+        height: 45vh;
+        position: relative;
+        overflow-y: hidden;
+        transition: all 150ms linear;
+        margin: 5px;
+    }
+    .gallery-holder div.img-holder:hover {
+        transform: scale(1.1);
+        box-shadow: 10px 10px 20px 2px #111;
+        z-index: 1111;
+    }
+    .gallery-holder div.img-holder img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    .hover-context {
+        position: absolute;
+        top: 0;
+        left: 0;
+       max-width: 100%;
+        max-height: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.733);
+        transition: all 500ms linear;
+        font-size: small;
+        padding: 10px;
+       opacity: 0;
+        text-align: justify;
+    }
+    .hover-context h1{
+        color: #9fddea;
+        opacity: 1;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 27%;
+    }
+    .hover-context p{
+        color: white;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        word-wrap:break-word;
+        font-size: 10px;
+        font-weight: normal;
+      
+    }
+
+    .video-holder {
+        width: 100%;
+        height: 60vh;
+        background: transparent;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 30px;
+    }
+
+    .frame {
+        width: 40%;
+        height: 50vh;
+        background: transparent;
+    }
+
+    .frame iframe {
+        width: 100%;
+        height: 100%;
+        transition: all linear 500ms;
+    }
+
+    .frame iframe:hover {
+        transform: scale(1.3);
+    }
+    footer{
+        font-family:cursive;
+        font-size: xx-large;
+        color: white;
+        font-weight: 700;
+    }
+    @media screen and (max-width:768px) {
+        .gallery-holder {
+        width: 90%;
+        height: auto;
+        background: transparent;
+        z-index: 1000;
+        display: flex;
+        padding: 22px 42px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .gallery-holder div.img-holder {
+        width: 300px;
+        height: 55vh;
+        position: relative;
+        overflow-y: hidden;
+        transition: all 150ms linear;
+    }
+    .gallery-holder div.img-holder:hover {
+        transform: scale(1);
+        box-shadow: 10px 10px 20px 2px #111;
+        z-index: 1111;
+    }
+    .gallery-holder div.img-holder img {
+        width: 100%;
+        height: 100%;
+    }
+    }
+</style>
+
+<body>
+    <div class="preloader">
+        <h1>Page is loading...Keep your patience</h1>
+        <img src="new/heart.png" alt="" id="heart">
+    </div>
+    <div class="container">
+        <h1>Things to do in ORLANDO</h1>
+        <div class="gallery-holder">
+            <div class="img-holder"><img src="new/entertainment.jpg" alt="" class="or-img">
+                <div class="hover-context">
+                    <h1>Entertainment</h1>
+                    <p>Race on Orlando’s best go-kart tracks & fun roller coasters in Fun Spot America
+                        Get the best view of the city with a ride on the The Wheel at ICON Park
+                        Challenge your mind with educational & exciting attractions at Wonder Works
+                        Be amazed by the incredible oddities at Ripley’s Believe It or Not
+                        Go on an epic mini-golf adventure at Pirate’s Cove Adventure Golf
+                        Step back in time and experience a classic Florida town with Old Town Kissimmee
+                        Create your own custom crayon in the Crayola Experience</p>
+                </div>
+            </div>
+            <div class="img-holder"><img src="new/meuseam.jpg" alt="" class="or-img">
+                <div class="hover-context">
+                    <h1>Meseum</h1>
+                    <p>Get up close with some of your favorite celebrities and historical figures at Madame Tussauds Orlando
+                        Investigate, discover, and become curious of Orlando Science Center
+                        Experience America's history through paintings at the Orlando Museum of Art
+                        See a glimpse of the artifacts and objects found in the Titanic The Artifact Exhibition
+                        Taste different types of chocolate at The World of Chocolate Museum
+                        Check out the Tiffany collection at Morse Museum of American Art!</p>
+                </div>
+            </div>
+            <div class="img-holder"><img src="new/nature.jpg" alt="" class="or-img">
+                <div class="hover-context">
+                    <h1>Nature &amp; Park</h1>
+                    <p>Admire 50 acres of gorgeous trees, palms, vines, roses, camellias and more at Harry P. Leu Gardens
+                        Go for a stroll around Lake Eola Park or rent a swan-shaped paddle boat
+                        Explore the ocean and feed marine creatures at SEA Life Orlando Aquarium
+                        Interact with lovely Florida native animals with the Exotic Animal Experience
+                        Learn about Florida’s amazing ecosystem in the Tibet-Butler Preserve
+                        Get up close to unique animals like zebras, elands, and many more at the Safari Wilderness Ranch</p>
+                </div>
+            </div>
+            <div class="img-holder"><img src="new/outdoor.jpg" alt="" class="or-img">
+                <div class="hover-context">
+                    <h1>Outdoor Activities</h1>
+                    <p>Rent a Paddleboard at beautiful Wekiva Island or Lake Killarney with Paddleboard Orlando
+                        Enjoy a Florida day trip with Real Florida Adventures
+                        Enjoy the best Orlando Jet Ski experience with Extreme Jet Ski of Orlando
+                        Swim with some of the happiest and friendliest dolphins with Florida Dolphin Tours
+                        Explore mangrove tunnels or skim across Everglades grasslands with Florida Everglades Airboat Tour
+                        Pack a picnic and explore the peaceful beauty of Disney Wilderness Preserve
+                        Get a unique view of Orlando with one of the many Helicopter Tours
+                        Enjoy the beautiful Florida weather in ShipWreck Island Water Park</p>
+                </div>
+            </div>
+            <div class="img-holder"><img src="new/thrill.jpg" alt="" class="or-img">
+                <div class="hover-context">
+                    <h1>Thrill &amp; Adventure</h1>
+                    <p>Have an indoor skydiving experience like no other at iFly Orlando
+                        Bullseye! Test your skills in axe throwing - one of the world’s fastest growing sports at BATL
+                        Solve puzzles and riddles and try to escape at Escapology or The Escape Game
+                        Race against your friends and become the ultimate champion at I-Drive NASCAR Kart Racing.Propel over 390 feet with an adrenaline experience like no other at Magical Midway Slingshot
+                        Ride through 220 acres with an ATV, buggy or mucky duck with Revolution Off Road
+                        Enjoy a 1,200-foot long high-flying journey on the Screamin’ Gator Zip Line
+                        Ride the world's tallest swing ride at Orlando StarFlyer</p>
+                </div>
+            </div>
+            <div class="img-holder"><img src="new/shopping.jpg" alt="" class="or-img">
+                <div class="hover-context">
+                    <h1>Shopping</h1>
+                    <p>Go shopping, have a family meal, catch a movie or go on a hot air balloon ride in Disney Springs
+                        Enjoy popular brands at affordable prices at the Orlando Premium Outlets
+                        Find some of your favorite designer brands at Mall at Millennia
+                        Shop in one of the most popular malls in the area, The Florida Mall
+                        Catch a movie, shop around or have dinner next to some of the best attractions at Pointe Orlando
+                        Play golf, buy souvenirs or have lunch at Universal’s City Walk</p>
+                </div>
+            </div>
+        </div>
+        <div class="video-holder">
+            <div class="frame">
+                <iframe width="711" height="400" src="https://www.youtube.com/embed/Vj52uJ45UfM"
+                    title="11 Awesome Day Trips from Orlando You Should Take!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="frame">
+                <iframe width="711" height="400" src="https://www.youtube.com/embed/mT4VlO3Xh8k"
+                    title="10 BEST Things to Do in Orlando, Florida" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+        </div>
+
+        <footer>
+            Enjoy the wedding of Tiffany &amp; Leon. 
+        </footer>
+    </div>
+    <div id="clouds"></div>
+</body>
+<script>
+    window.addEventListener('load', function () {
+        $('.preloader').hide()
+        const gallery = document.querySelector('.gallery-holder')
+        for (let x of gallery.children) {
+            x.addEventListener('mouseenter', function () {
+                for (let y of x.children) {
+                    y.style.opacity = '1'
+                }
+            })
+            x.addEventListener('mouseleave', function () {
+                x.children[x.children.length - 1].style.opacity = '0'
+            })
+        }
+    })
+
+    function loaderAnime(){
+    $('#heart').animate({
+      opacity:'0.5'
+    },1000,'swing',function(){
+      $('#heart').animate({
+        opacity:'1'
+      },200,'swing',loaderAnime)
+    })
+    }
+   loaderAnime()
+</script>
+
+</html>

@@ -1,0 +1,154 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Tiffany &amp; Leon are getting married!</title>
+<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
+
+    <link type='text/css' href='contact.css' rel='stylesheet' media='screen' />
+    <script type="text/javascript" src="js/jquery.lightbox-0.5.pack.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('#hsresort a').lightBox();
+    });
+    </script>
+</head>
+
+<body>
+    <div class="preloader">
+        <h1>Page is loading...keep your patience</h1>
+        <img src="new/heart.png" alt="loading" id="heart">
+    </div>
+<div id="container">
+	<div id="section1">
+		<div id="kg"></div>  
+        <div id="lunaplane">
+        	<a id="btn-weekend" href="#section2">Weekend</a>
+            <a id="btn-travel" href="#section3">Travel</a>
+            <a id="btn-resort" href="#section4">Resort</a>
+            <a id="btn-registry" href="#section5">Registry</a>
+        </div>     
+        <img id="datelocation" src="images/datelocation.png" alt="June 5 2011, Cherry Valley CA" />
+        
+    </div><!--End section1-->
+    <div id="section2">
+        <div class="nav" id="nav2">
+        	<a class="up" id="up2" href="#section1"></a>
+            <a class="down" id="down2" href="#section3"></a>
+        </div><!--End nav-dl-->
+    	<div id="joinus">
+        	<!--<a id="btn-rsvp" href="#" class="contact">RSVP Here!</a>-->
+        </div>
+        <img id="cupcakes1" src="images/cupcakes.png" alt="Cupcakes!" />
+    </div><!--End section2-->
+    <div id="section3">
+    	<div class="nav" id="nav3">
+        	<a class="up" id="up3" href="#section2"></a>
+            <a class="down" id="down3" href="#section4"></a>
+        </div><!--End nav-dl-->
+    	<div id="travelinfo">
+        </div>
+        <img id="bunnyballoon" src="images/bunnyballoon.png" alt="Bunnies!" />
+    </div><!--End section3-->
+    <div id="section4">
+    	<div class="nav" id="nav4">
+        	<a class="up" id="up4" href="#section3"></a>
+            <a class="down" id="down4" href="#section5"></a>
+        </div><!--End nav-dl-->
+    	<div id="hsresort">        
+        	<div id="btn-trails">Things To DO</div>
+            <a id="btn-property" href="images/1280px-Disneyworld_overview_map.png" title="Highland Springs Resort Property Map">View Property Map</a>
+            </div>
+            <img id="rocketpig" src="images/rocketpig.png" alt="Rocket Pig!" />
+            
+        </div>
+    <div id="section5">
+    	<div class="nav" id="nav5">
+        	<a class="up" id="up5" href="#section4"></a>
+            <a class="top" id="down5" href="#section1"></a>
+      </div><!--End nav-dl-->
+    	<div id="registry">
+        	<a id="btn-honeyfund" href="http://www.honeyfund.com/wedding/karlandgina" target="_blank">Honeyfund</a>
+        </div>
+    </div>
+    
+</div><!--End container-->
+<div id="clouds"></div>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type='text/javascript' src='js/contact.js'></script>
+<script>
+    window.addEventListener('load',function(){
+        $('.preloader').hide()
+        $('#btn-trails').click(function(){
+            window.open('todo.html')
+        })
+    })
+    function loaderAnime(){
+    $('#heart').animate({
+      opacity:'0.5'
+    },1000,'swing',function(){
+      $('#heart').animate({
+        opacity:'1'
+      },200,'swing',loaderAnime)
+    })
+
+
+    }
+   
+   loaderAnime()
+
+   function makeParallax(){
+    const couple = document.getElementById('kg')
+    let num ; 
+    let shifting = setInterval(() => {
+        
+        num = Math.floor(Math.random() * 41) -20
+
+        $('#kg').css('transform',`translateX(${num}px) translateY(${num}px)`)
+        
+    },500);
+    
+    couple.onclick=function(){
+        clearInterval(shifting)
+        $('#kg').css('transform',`translateX(500px) translateY(-1500px)`)
+        setTimeout(function(){
+            $('#kg').css('transform',`translateX(-1800px) translateY(1000px)`)
+
+        },500)
+        setTimeout(makeParallax,1000)
+    }
+   }
+   let cloudval = setInterval(cloud,500)
+   let pos = 0;
+    function cloud(){
+        const cloud = document.getElementById('clouds');
+        
+
+        if(pos == 90){
+            cloud.style.opacity = 0;
+            cloud.style.left =0;
+            pos = 0
+
+        }else{
+            pos++;
+            cloud.style.left = pos+'%';
+            cloud.style.opacity = 1;
+        }
+    }
+   makeParallax()
+
+   function bunny(){
+    $('#bunnyballoon').animate({
+        top:'300px'
+    },3500,'swing',function(){
+        $('#bunnyballoon').animate({
+            top:'100px'
+        },3500,'swing',bunny)
+    })
+   }
+   bunny()
+</script>
+</body>
+</html>
